@@ -14,6 +14,7 @@ const LoginScreen = ({ location, history }) => {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
   const { loading, error, userInfo } = userLogin;
+  console.log(userInfo);
   const redirect = location.search ? location.search.split('=')[1] : '/';
 
   useEffect(() => {
@@ -49,7 +50,9 @@ const LoginScreen = ({ location, history }) => {
             type='password'
             placeholder='Enter password'
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           ></Form.Control>
         </Form.Group>
 

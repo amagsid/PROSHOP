@@ -5,10 +5,6 @@ import {
   registerUser,
   getUserProfile,
   updateUserProfile,
-  //   getUsers,
-  //   deleteUser,
-  //   getUserById,
-  //   updateUser,
 } from '../controllers/userControllers.js';
 import { protect, admin } from '../middleware/authMiddleware.js';
 
